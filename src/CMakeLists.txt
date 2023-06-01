@@ -18,6 +18,7 @@ set(STANDALONE_TARGETS
 	las2txt
 	lasdiff
 	lasindex
+	lasquery
 )
 set(ALL_TARGETS ${GEOPROJECTION_TARGETS} ${STANDALONE_TARGETS})
 
@@ -27,6 +28,7 @@ endforeach(TARGET)
 
 foreach(TARGET ${STANDALONE_TARGETS})
 	add_executable(${TARGET} ${TARGET}.cpp)
+	message("${TARGET}")
 endforeach(TARGET)
 
 foreach(TARGET ${ALL_TARGETS})
